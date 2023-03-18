@@ -1,0 +1,17 @@
+<h1>Chat with French Language Model</h1>
+
+<div id="conversation">
+  <% @conversation.each do |message| %>
+    <p>
+      <strong>You:</strong> <%= message[:input] %>
+    </p>
+    <p>
+      <strong>Computer:</strong> <%= message[:response] %>
+    </p>
+  <% end %>
+</div>
+
+<form id="chat-form">
+  <input type="text" id="input" name="input" placeholder="Type your message...">
+  <button type="submit">Send</button>
+</form>
